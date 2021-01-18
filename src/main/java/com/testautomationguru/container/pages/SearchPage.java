@@ -26,7 +26,7 @@ public class SearchPage {
         System.out.println("Browser launched and navigated to Google");
     }
 
-    public boolean checkTitle(String text) {
+    public Boolean checkTitle(String text) {
         return ExpectedConditions.titleContains(text);
     }
 
