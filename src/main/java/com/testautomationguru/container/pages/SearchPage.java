@@ -27,7 +27,7 @@ public class SearchPage {
     }
 
     public boolean searchForElement(String text) {
-        return ExpectedConditions.presenceOfElementLocated(By.name(text)));
+        return ExpectedConditions.presenceOfElementLocated(By.name(text));
     }
 
 
