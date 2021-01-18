@@ -80,6 +80,8 @@
 					</execution>
 				</executions>
 				<configuration>
+      					<username>shivani221</username>
+      					<password>Saraswati@456</password>
 					<repository>shivani221/containertest</repository>
 					<tag>demo</tag>
 				</configuration>
