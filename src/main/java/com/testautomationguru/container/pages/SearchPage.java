@@ -18,15 +18,6 @@ public class SearchPage {
     @FindBy(name = "q")
     private WebElement searchBox;
 
-    @FindBy(css = "input.lsb")
-    private WebElement searchButton;
-
-    @FindBy(className = "rc")
-    private List<WebElement> searchResults;
-
-    @FindBy(id = "foot")
-    private WebElement footer;
-
     public SearchPage(final WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -39,19 +30,9 @@ public class SearchPage {
     }
 
     public void searchFor(String text) {
-        this.searchBox.sendKeys(text);
-        System.out.println(text + " - entered for search");
-        wait.until(ExpectedConditions.elementToBeClickable(this.searchButton));
-        System.out.println("Search button clicked");
-        this.searchButton.click();
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.className("rc")));
-        System.out.println("Results appeared");
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.name("q")));
+        System.out.println("Element");
     }
 
-    public List<WebElement> getResults() {
-        System.out.println("Results Count : " + this.searchResults.size());
-        System.out.println("---------------------------------------------");
-        return this.searchResults;
-    }
 
 }
