@@ -19,8 +19,8 @@ public class SearchTest extends BaseTest {
         google = new SearchPage(driver);
     }
 
-    @Test(dataProvider = "search-keywords")
-    public void googleTest(String searchKeyword) {
+    @Test()
+    public void googleTest() {
         google.goTo();
         Assert.assertTrue(google.checkTitle("g"));
     }
