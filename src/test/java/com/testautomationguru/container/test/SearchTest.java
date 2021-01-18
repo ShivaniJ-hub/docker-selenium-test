@@ -23,23 +23,8 @@ public class SearchTest extends BaseTest {
     public void googleTest(String searchKeyword) {
         google.goTo();
         google.searchFor(searchKeyword);
-        Assert.assertTrue(google.getResults().size()>0);
+        Assert.assertTrue(searchForElement("q"));
     }
    
-    @DataProvider(name = "search-keywords")
-    public static Object[][] credentials() {
-          return new Object[][] {
-              { "test automation guru" },
-              { "selenium webdriver" },
-              { "dockerized selenium grid" },
-              { "test automation blog" },
-              { "jmeter docker" } ,
-              { "test automation guru" },
-              { "selenium webdriver" },
-              { "dockerized selenium grid" },
-              { "test automation blog" },
-              { "jmeter docker" }               
-          };
-    }
 
 }
