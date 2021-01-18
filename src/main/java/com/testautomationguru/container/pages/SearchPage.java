@@ -26,8 +26,8 @@ public class SearchPage {
         System.out.println("Browser launched and navigated to Google");
     }
 
-    public boolean searchForElement(String text) {
-        return ExpectedConditions.presenceOfElementLocated(By.name(text));
+    public boolean checkTitle(String text) {
+        return ExpectedConditions.titleContains(text);
     }
 
 
