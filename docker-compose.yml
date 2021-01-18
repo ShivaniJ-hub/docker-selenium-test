@@ -13,7 +13,7 @@ services:
       - HUB_PORT_4444_TCP_ADDR=selenium-hub
       - HUB_PORT_4444_TCP_PORT=4444
   search-module:
-    image: vinsdocker/containertest:demo
+    image: shivani221/containertest:demo
     container_name: search-module
     depends_on:
       - chrome
