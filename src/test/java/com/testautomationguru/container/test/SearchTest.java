@@ -22,7 +22,7 @@ public class SearchTest extends BaseTest {
     @Test(dataProvider = "search-keywords")
     public void googleTest(String searchKeyword) {
         google.goTo();
-        Assert.assertTrue(checkTitle("g"));
+        Assert.assertTrue(google.checkTitle("g"));
     }
    
 
