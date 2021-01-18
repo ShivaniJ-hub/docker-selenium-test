@@ -23,7 +23,7 @@ public class SearchTest extends BaseTest {
     public void googleTest(String searchKeyword) {
         google.goTo();
         google.searchFor(searchKeyword);
-        Assert.assertTrue(searchForElement("q"));
+        Assert.assertTrue(checkTitle("g"));
     }
    
 
