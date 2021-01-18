@@ -15,9 +15,6 @@ public class SearchPage {
     private final WebDriver driver;
     private final WebDriverWait wait;
 
-    @FindBy(name = "q")
-    private WebElement searchBox;
-
     public SearchPage(final WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -29,9 +26,8 @@ public class SearchPage {
         System.out.println("Browser launched and navigated to Google");
     }
 
-    public void searchFor(String text) {
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.name("q")));
-        System.out.println("Element");
+    public boolean searchForElement(String text) {
+        return ExpectedConditions.presenceOfElementLocated(By.name(text)));
     }
 
 
