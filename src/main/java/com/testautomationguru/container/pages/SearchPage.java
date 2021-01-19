@@ -24,10 +24,10 @@ public class SearchPage {
     public void goTo() {
         this.driver.get("https://www.google.com");
         System.out.println("Browser launched and navigated to Google");
+        System.out.println(driver.getTitle().contains("u"));
     }
 
     public Boolean checkTitle(String expectedTitle) {
-        System.out.println(driver.getTitle().contains(expectedTitle));
         return driver.getTitle().contains(expectedTitle);
     }
 
