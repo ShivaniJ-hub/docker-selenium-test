@@ -24,7 +24,8 @@ public class SearchPage {
     public void goTo() {
         this.driver.get("https://www.google.com");
         System.out.println("Browser launched and navigated to Google");
-        System.out.println(driver.getTitle().contains("u"));
+        boolean x = Boolean.TRUE.equals(driver.getTitle().contains("u"));
+        System.out.println(x);
     }
 
     public Boolean checkTitle(String expectedTitle) {
