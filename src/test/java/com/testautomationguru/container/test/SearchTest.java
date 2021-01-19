@@ -23,7 +23,6 @@ public class SearchTest extends BaseTest {
     public void googleTest() {
         google.goTo();
         Assert.assertTrue(true);
-        driver.quit();
     }
    
 
