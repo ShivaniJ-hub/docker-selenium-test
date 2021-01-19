@@ -36,8 +36,8 @@ public class BaseTest {
         
     }
 
-    @AfterTest
-    public void tearDown() throws InterruptedException {
-        driver.quit();
-    }  
+    @After
+    public void close_browser(){
+        driver.close();
+    } 
 }
