@@ -12,6 +12,7 @@ services:
     environment:
       - HUB_PORT_4444_TCP_ADDR=selenium-hub
       - HUB_PORT_4444_TCP_PORT=4444
+      - JAVA_OPTS=-Dwebdriver.chrome.whitelistedIps=
   search-module:
     image: shivani221/containertest:latest
     container_name: search-module
