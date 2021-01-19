@@ -25,6 +25,7 @@ public class SearchPage {
         this.driver.get("https://www.google.com");
         System.out.println("Browser launched and navigated to Google");
         boolean x = Boolean.TRUE.equals(driver.getTitle().contains("u"));
+        System.out.println("Okay Google");
         System.out.println(x);
     }
 
