@@ -27,6 +27,7 @@ public class SearchPage {
     }
 
     public Boolean checkTitle(String expectedTitle) {
+        System.out.println(driver.getTitle().contains(expectedTitle));
         return driver.getTitle().contains(expectedTitle);
     }
 
