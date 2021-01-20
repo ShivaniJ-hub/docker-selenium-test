@@ -7,6 +7,9 @@ services:
       - "4444:4444"
   chrome:
     image: selenium/node-chrome
+    container_name: chrome
+    ports:
+      - "9001:5900"
     depends_on:
       - selenium-hub
     environment:
